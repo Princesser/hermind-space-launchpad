@@ -51,11 +51,7 @@ const WhyItMatters = () => {
           <Card className="bg-gradient-to-br from-purple-100 to-pink-100 border-0">
             <CardContent className="p-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">The Stigma Problem</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                In Africa, mental health is often misunderstood. People with mental illness are considered 
-                "insane," "unpredictable," or having "spiritual problems." This stigma prevents girls from 
-                seeking help when they need it most.
-              </p>
+              <p className="text-gray-600 mb-4 leading-relaxed">As we grow into adolescence, the brain undergoes some chemical changes that can sometimes lead to emotional and mental imbalances. This is often misunderstood by our society.</p>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Parents often tell their daughters to "just pray about it" without providing proper support 
                 or professional help. This dismissive approach leaves girls feeling isolated and unheard.
