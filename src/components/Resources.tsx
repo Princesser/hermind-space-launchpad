@@ -1,54 +1,25 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-
 const Resources = () => {
-  const resources = [
-    {
-      category: 'Mental Health Education',
-      icon: '📚',
-      items: [
-        'Understanding anxiety and depression symptoms',
-        'Recognizing mental health warning signs',
-        'Coping strategies for academic stress',
-        'Building emotional resilience'
-      ]
-    },
-    {
-      category: 'Soothing Tools',
-      icon: '🧘‍♀️',
-      items: [
-        'Guided meditation sessions',
-        'Breathing exercises for anxiety',
-        'Calming music playlists',
-        'Progressive muscle relaxation'
-      ]
-    },
-    {
-      category: 'Community Support',
-      icon: '🤝',
-      items: [
-        'Peer support circles',
-        'Anonymous sharing spaces',
-        'Mentorship programs',
-        'Crisis support networks'
-      ]
-    },
-    {
-      category: 'Professional Help',
-      icon: '👩‍⚕️',
-      items: [
-        'Mental health professional directory',
-        'Therapy session guidance',
-        'Crisis hotline numbers',
-        'Local support services'
-      ]
-    }
-  ];
-
-  return (
-    <section id="resources" className="py-20 bg-white">
+  const resources = [{
+    category: 'Mental Health Education',
+    icon: '📚',
+    items: ['Understanding anxiety and depression symptoms', 'Recognizing mental health warning signs', 'Coping strategies for academic stress', 'Building emotional resilience']
+  }, {
+    category: 'Soothing Tools',
+    icon: '🧘‍♀️',
+    items: ['Guided meditation sessions', 'Breathing exercises for anxiety', 'Calming music playlists', 'Progressive muscle relaxation']
+  }, {
+    category: 'Community Support',
+    icon: '🤝',
+    items: ['Peer support circles', 'Anonymous sharing spaces', 'Mentorship programs', 'Crisis support networks']
+  }, {
+    category: 'Professional Help',
+    icon: '👩‍⚕️',
+    items: ['Mental health professional directory', 'Therapy session guidance', 'Crisis hotline numbers', 'Local support services']
+  }];
+  return <section id="resources" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
@@ -61,43 +32,24 @@ const Resources = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {resources.map((resource, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300 border-0 bg-gradient-to-br from-purple-50 to-pink-50">
+          {resources.map((resource, index) => <Card key={index} className="hover:shadow-lg transition-all duration-300 border-0 bg-gradient-to-br from-purple-50 to-pink-50">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="text-3xl mr-4">{resource.icon}</div>
                   <h3 className="text-xl font-semibold text-gray-800">{resource.category}</h3>
                 </div>
                 <ul className="space-y-3">
-                  {resource.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="flex items-start space-x-3">
+                  {resource.items.map((item, itemIndex) => <li key={itemIndex} className="flex items-start space-x-3">
                       <div className="w-1.5 h-1.5 bg-purple-400 rounded-full mt-2 flex-shrink-0"></div>
                       <span className="text-gray-600">{item}</span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
-        <div className="text-center bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl p-8">
-          <h3 className="text-2xl font-semibold text-gray-800 mb-4">Emergency Support</h3>
-          <p className="text-gray-600 mb-6">
-            If you're experiencing a mental health crisis, please reach out for immediate help:
-          </p>
-          <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <Button variant="outline" className="bg-white hover:bg-gray-50">
-              Crisis Hotline: 0800-123-4567
-            </Button>
-            <Button variant="outline" className="bg-white hover:bg-gray-50">
-              Emergency Services: 911
-            </Button>
-          </div>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Resources;
