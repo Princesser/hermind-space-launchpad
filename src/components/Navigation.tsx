@@ -15,28 +15,28 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-purple-100">
+    <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-amber-100">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
+            <div className="w-8 h-8 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">H</span>
             </div>
             <div>
-              <h1 className="text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-                herMind space
+              <h1 className="text-lg font-bold bg-gradient-to-r from-amber-700 to-orange-600 bg-clip-text text-transparent">
+                her<span className="font-extrabold text-amber-800">M</span>ind <span className="font-extrabold text-amber-800">S</span>pace
               </h1>
-              <p className="text-xs text-gray-500 -mt-1">the girls' school of mind</p>
+              <p className="text-xs text-amber-600 -mt-1">the girls' school of mind</p>
             </div>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-purple-600 transition-colors">Home</button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-purple-600 transition-colors">About Us</button>
-            <button onClick={() => scrollToSection('why-it-matters')} className="text-gray-700 hover:text-purple-600 transition-colors">Why It Matters</button>
-            <button onClick={() => scrollToSection('resources')} className="text-gray-700 hover:text-purple-600 transition-colors">Resources</button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-purple-600 transition-colors">Contact Us</button>
+            <button onClick={() => scrollToSection('home')} className="text-amber-700 hover:text-orange-600 transition-colors">Home</button>
+            <button onClick={() => scrollToSection('about')} className="text-amber-700 hover:text-orange-600 transition-colors">About Us</button>
+            <button onClick={() => scrollToSection('why-it-matters')} className="text-amber-700 hover:text-orange-600 transition-colors">Why It Matters</button>
+            <button onClick={() => scrollToSection('resources')} className="text-amber-700 hover:text-orange-600 transition-colors">Resources</button>
+            <button onClick={() => scrollToSection('contact')} className="text-amber-700 hover:text-orange-600 transition-colors">Contact Us</button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -52,13 +52,13 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="md:hidden py-4 border-t border-amber-200">
             <div className="flex flex-col space-y-2">
-              <button onClick={() => scrollToSection('home')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">Home</button>
-              <button onClick={() => scrollToSection('about')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">About Us</button>
-              <button onClick={() => scrollToSection('why-it-matters')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">Why It Matters</button>
-              <button onClick={() => scrollToSection('resources')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">Resources</button>
-              <button onClick={() => scrollToSection('contact')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">Contact Us</button>
+              <button onClick={() => scrollToSection('home')} className="text-left py-2 text-amber-700 hover:text-orange-600 transition-colors">Home</button>
+              <button onClick={() => scrollToSection('about')} className="text-left py-2 text-amber-700 hover:text-orange-600 transition-colors">About Us</button>
+              <button onClick={() => scrollToSection('why-it-matters')} className="text-left py-2 text-amber-700 hover:text-orange-600 transition-colors">Why It Matters</button>
+              <button onClick={() => scrollToSection('resources')} className="text-left py-2 text-amber-700 hover:text-orange-600 transition-colors">Resources</button>
+              <button onClick={() => scrollToSection('contact')} className="text-left py-2 text-amber-700 hover:text-orange-600 transition-colors">Contact Us</button>
             </div>
           </div>
         )}
