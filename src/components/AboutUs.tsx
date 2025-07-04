@@ -50,8 +50,8 @@ const AboutUs = () => {
                   <p className="text-sm font-medium text-gray-700">Education & Awareness</p>
                 </div>
                 <div className="bg-gradient-to-br from-pink-50 to-green-50 p-4 rounded-xl">
-                  <div className="text-2xl mb-2">🤝</div>
-                  <p className="text-sm font-medium text-gray-700">Community Support</p>
+                  <div className="text-2xl mb-2">🧠</div>
+                  <p className="text-sm font-medium text-gray-700">Mental Health Resources</p>
                 </div>
               </div>
             </div>
