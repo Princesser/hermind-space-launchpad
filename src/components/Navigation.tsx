@@ -19,26 +19,13 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center space-x-3">
-            {/* Girl illustration logo */}
+            {/* Logo using uploaded image */}
             <div className="w-10 h-10 relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center relative overflow-hidden">
-                {/* Girl's face */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  {/* Hair */}
-                  <div className="absolute top-1 w-8 h-6 bg-gradient-to-b from-amber-700 to-amber-800 rounded-t-full"></div>
-                  {/* Face */}
-                  <div className="absolute top-2.5 w-6 h-5 bg-gradient-to-b from-amber-100 to-amber-200 rounded-full"></div>
-                  {/* Eyes */}
-                  <div className="absolute top-3.5 left-1/2 transform -translate-x-1/2 flex space-x-1">
-                    <div className="w-0.5 h-0.5 bg-gray-800 rounded-full"></div>
-                    <div className="w-0.5 h-0.5 bg-gray-800 rounded-full"></div>
-                  </div>
-                  {/* Smile */}
-                  <div className="absolute top-4.5 left-1/2 transform -translate-x-1/2 w-2 h-1 border-b border-gray-600 rounded-full"></div>
-                  {/* Body/shoulders */}
-                  <div className="absolute bottom-0 w-8 h-3 bg-gradient-to-b from-green-400 to-green-500 rounded-t-lg"></div>
-                </div>
-              </div>
+              <img 
+                src="/lovable-uploads/932512c3-e3d8-4f48-be64-4006df679881.png" 
+                alt="herMind space logo" 
+                className="w-10 h-10 rounded-full object-cover"
+              />
             </div>
             <div>
               <h1 className="text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
