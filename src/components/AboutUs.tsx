@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-
 const AboutUs = () => {
-  return (
-    <section id="about" className="py-20 bg-white relative overflow-hidden">
+  return <section id="about" className="py-20 bg-white relative overflow-hidden">
       {/* Background decorative blocks */}
       <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-purple-200 to-pink-200 rounded-3xl opacity-60 rotate-12"></div>
       <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-green-200 to-purple-200 rounded-2xl opacity-50 -rotate-12"></div>
@@ -37,11 +34,7 @@ const AboutUs = () => {
                 community support, and practical tools to help young women navigate the unique challenges 
                 they face in today's demanding world.
               </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Founded by Princess Mbamalu, an 18-year-old product designer and social entrepreneur, 
-                herMind space was born from personal experience and the recognition that over 70 million 
-                women in Africa are experiencing a mental health crisis.
-              </p>
+              <p className="text-gray-600 mb-6 leading-relaxed">Founded by Princess Mbamalu, a product designer and social technology entrepreneur, herMind space was born from personal experience. community need [I discovered even more, the necessity to build herMind Space after conducting an interview research during the AFS and University of Pennslyvania Accelerators program], and aslo, the recognition that over 70 million women in Africa are experiencing a mental health crisis.</p>
               
               {/* Mission highlights */}
               <div className="grid grid-cols-2 gap-4 mt-6">
@@ -60,9 +53,7 @@ const AboutUs = () => {
           <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-0 shadow-xl">
             <CardContent className="p-8">
               <div className="text-center">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <span className="text-3xl">👑</span>
-                </div>
+                
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Princess Mbamalu</h4>
                 <p className="text-gray-600 mb-4 font-medium">Founder & Visionary</p>
                 <div className="bg-white/60 backdrop-blur-sm rounded-xl p-6">
@@ -77,8 +68,6 @@ const AboutUs = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutUs;
