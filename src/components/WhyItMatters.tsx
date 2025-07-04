@@ -14,7 +14,7 @@ const WhyItMatters = () => {
     label: 'Higher rate of mental health issues in girls vs boys',
     icon: '⚡'
   }];
-  const challenges = ['Academic pressure and college admission stress', 'Social media comparison and unrealistic expectations', 'Family responsibilities and cultural expectations', 'Body shaming and self-image issues', 'Fear of failure and future uncertainty', 'Sexual abuse and relationship trauma', 'Poverty and socioeconomic pressures', 'Mental health stigma and lack of support'];
+  const challenges = ['Academic pressure and college admission stress', 'Social media comparison and unrealistic expectations', 'Body shaming and self-image issues', 'Fear of failure and future uncertainty', 'Sexual abuse and relationship trauma', 'Poverty and socioeconomic pressures', 'Mental health stigma and lack of support', 'Identity and passion discovery', 'Lack of health, life, and work balance'];
   return <section id="why-it-matters" className="py-20 bg-gradient-to-br from-green-50 via-purple-50 to-pink-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
