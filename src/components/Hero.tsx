@@ -33,11 +33,8 @@ const Hero = () => {
           <div className="mb-8 animate-fade-in">
             <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-green-500 bg-clip-text text-transparent mb-6 md:text-5xl py-[10px]">herMind Space</h1>
             
-            <p className="text-xl md:text-2xl text-gray-700 mb-4 font-light">The Girls' School of Mind</p>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              A safe digital sanctuary designed specifically for African teen girls (13-20) to manage anxiety, 
-              build resilience, and connect with a supportive community that understands your unique journey.
-            </p>
+            <p className="text-xl md:text-2xl text-gray-700 mb-4 font-light px-0 py-0 my-0 mx-0">The Girls' School of Mind</p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">A safe digital space designed specifically for African teen girls (13-20) to foster empowerment, enlightenment, and mental wellness.</p>
           </div>
 
           <div className="mb-12 animate-fade-in" style={{
@@ -62,21 +59,21 @@ const Hero = () => {
                 <span className="text-2xl">🌱</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Mental Health Education</h3>
-              <p className="text-gray-600">Learn practical strategies to manage anxiety, stress, and build emotional resilience</p>
+              <p className="text-gray-600">Learn everything about "mental health for teens." Awareness + action = transformation.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">👥</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Safe Community</h3>
-              <p className="text-gray-600">Connect with fellow African teen girls who understand your experiences and challenges</p>
+              <p className="text-gray-600">Connect with fellow African teen girls who understand your experiences and challenges.</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Soothing Resources</h3>
-              <p className="text-gray-600">Access calming tools, mindfulness exercises, and coping strategies available 24/7</p>
+              <p className="text-gray-600 text-base font-normal">Access calming tools, mindfulness exercises, and other coping strategies, all in one space.</p>
             </div>
           </div>
         </div>
