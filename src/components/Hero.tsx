@@ -24,7 +24,7 @@ const Hero = () => {
     // Simulate API call
     setTimeout(() => {
       toast({
-        title: "Welcome to the community! 🌸",
+        title: "Welcome to the waitlist! 🌸",
         description: "You're now on the waitlist. We'll notify you when herMind space launches.",
       });
       setEmail('');
@@ -33,13 +33,16 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-pink-50 to-green-50">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-pink-50 to-green-50 pt-16">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-green-500 bg-clip-text text-transparent mb-6">
               herMind space
             </h1>
+            <p className="text-lg md:text-xl text-gray-600 mb-4 font-medium italic">
+              the girls' school of mind
+            </p>
             <p className="text-xl md:text-2xl text-gray-700 mb-4 font-light">
               Empowering African Teen Girls' Mental Wellness
             </p>
@@ -63,7 +66,7 @@ const Hero = () => {
                 disabled={isLoading}
                 className="h-12 px-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105"
               >
-                {isLoading ? 'Joining...' : 'Join Our Community'}
+                {isLoading ? 'Joining...' : 'Join the Waitlist'}
               </Button>
             </form>
             <p className="text-sm text-gray-500 mt-4">
