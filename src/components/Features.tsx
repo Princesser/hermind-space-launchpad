@@ -5,34 +5,34 @@ import { Card, CardContent } from '@/components/ui/card';
 const Features = () => {
   const features = [
     {
-      icon: '🌸',
-      title: 'Personalized Wellness Plans',
-      description: 'AI-powered recommendations based on your unique needs and preferences'
-    },
-    {
-      icon: '💭',
-      title: 'Therapy & Counseling',
-      description: 'Connect with licensed therapists who understand women\'s mental health'
-    },
-    {
-      icon: '📓',
-      title: 'Digital Journal',
-      description: 'Private space to track your thoughts, moods, and personal growth'
-    },
-    {
-      icon: '🎯',
-      title: 'Goal Setting',
-      description: 'Set and achieve mental wellness goals with guided support'
+      icon: '📚',
+      title: 'Mental Health Education',
+      description: 'Learn to recognize anxiety symptoms, understand mental health challenges, and discover effective coping strategies tailored for African teen girls'
     },
     {
       icon: '🤝',
       title: 'Peer Support Groups',
-      description: 'Join circles of women facing similar challenges and victories'
+      description: 'Join circles of girls facing similar challenges - from academic pressure to family expectations, body image, and relationship stress'
     },
     {
-      icon: '📚',
-      title: 'Educational Resources',
-      description: 'Expert-curated content on women\'s mental health topics'
+      icon: '🧘‍♀️',
+      title: 'Soothing Resources',
+      description: 'Access guided meditations, breathing exercises, calming music, and relaxation techniques designed for stress relief'
+    },
+    {
+      icon: '💬',
+      title: 'Safe Space to Speak Out',
+      description: 'Share your experiences without judgment in a supportive environment that breaks the stigma around mental health'
+    },
+    {
+      icon: '🎯',
+      title: 'Goal Setting & Tracking',
+      description: 'Set wellness goals, track your mental health journey, and celebrate small victories along the way'
+    },
+    {
+      icon: '📱',
+      title: '24/7 Access',
+      description: 'Get support whenever you need it most - during exam stress, sleepless nights, or overwhelming moments'
     }
   ];
 
@@ -41,12 +41,12 @@ const Features = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            Everything you need for your
-            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent"> mental wellness journey</span>
+            Breaking the silence around
+            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent"> mental health in Africa</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            herMind space combines evidence-based therapeutic approaches with modern technology 
-            to create a comprehensive mental health platform designed by women, for women.
+            We understand the unique pressures you face - from academic expectations to social media comparison, 
+            family responsibilities, and the challenge of speaking out about mental health in our communities.
           </p>
         </div>
 

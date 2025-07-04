@@ -24,8 +24,8 @@ const Hero = () => {
     // Simulate API call
     setTimeout(() => {
       toast({
-        title: "Welcome to the waitlist! 🌸",
-        description: "We'll notify you when herMind space launches.",
+        title: "Welcome to the community! 🌸",
+        description: "You're now on the waitlist. We'll notify you when herMind space launches.",
       });
       setEmail('');
       setIsLoading(false);
@@ -41,11 +41,11 @@ const Hero = () => {
               herMind space
             </h1>
             <p className="text-xl md:text-2xl text-gray-700 mb-4 font-light">
-              Your sanctuary for mental wellness
+              Empowering African Teen Girls' Mental Wellness
             </p>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              A safe, supportive digital space designed specifically for women to explore, 
-              heal, and thrive in their mental health journey.
+              A safe digital sanctuary designed specifically for African teen girls (13-20) to manage anxiety, 
+              build resilience, and connect with a supportive community that understands your unique journey.
             </p>
           </div>
 
@@ -63,35 +63,35 @@ const Hero = () => {
                 disabled={isLoading}
                 className="h-12 px-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105"
               >
-                {isLoading ? 'Joining...' : 'Join Waitlist'}
+                {isLoading ? 'Joining...' : 'Join Our Community'}
               </Button>
             </form>
             <p className="text-sm text-gray-500 mt-4">
-              Be the first to know when we launch. No spam, we promise. 💜
+              Be part of changing the mental health narrative in Africa. No spam, we promise. 💜
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in" style={{ animationDelay: '0.4s' }}>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">🧘‍♀️</span>
+                <span className="text-2xl">🌱</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">Mindful Healing</h3>
-              <p className="text-gray-600">Guided meditation and mindfulness practices tailored for women</p>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Mental Health Education</h3>
+              <p className="text-gray-600">Learn practical strategies to manage anxiety, stress, and build emotional resilience</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">👥</span>
               </div>
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Safe Community</h3>
-              <p className="text-gray-600">Connect with like-minded women in a supportive environment</p>
+              <p className="text-gray-600">Connect with fellow African teen girls who understand your experiences and challenges</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">📱</span>
+                <span className="text-2xl">🎯</span>
               </div>
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">24/7 Support</h3>
-              <p className="text-gray-600">Access tools and resources whenever you need them most</p>
+              <h3 className="text-lg font-semibold text-gray-800 mb-2">Soothing Resources</h3>
+              <p className="text-gray-600">Access calming tools, mindfulness exercises, and coping strategies available 24/7</p>
             </div>
           </div>
         </div>

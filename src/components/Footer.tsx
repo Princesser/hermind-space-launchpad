@@ -10,18 +10,30 @@ const Footer = () => {
             herMind space
           </h3>
           <p className="text-gray-400 mb-8 max-w-md mx-auto">
-            Creating safe digital spaces for women's mental wellness, one mind at a time.
+            Changing the mental health narrative in Africa, one girl at a time. 
+            Breaking stigma, building resilience, creating hope.
           </p>
           
+          <div className="mb-8">
+            <p className="text-purple-300 font-medium mb-2">Founded by Princess Mbamalu</p>
+            <p className="text-sm text-gray-400 max-w-2xl mx-auto">
+              An 18-year-old product designer and social entrepreneur dedicated to fighting 
+              the mental health crisis affecting millions of girls across Africa.
+            </p>
+          </div>
+          
           <div className="flex justify-center space-x-8 mb-8">
-            <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Terms of Service</a>
+            <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">About Our Mission</a>
+            <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Mental Health Resources</a>
             <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">Contact Us</a>
           </div>
           
           <div className="border-t border-gray-800 pt-8">
             <p className="text-sm text-gray-500">
-              © 2024 herMind space. All rights reserved. Made with 💜 for women's mental wellness.
+              © 2024 herMind space. All rights reserved. Made with 💜 for African teen girls' mental wellness.
+            </p>
+            <p className="text-xs text-gray-600 mt-2">
+              Over 70 million women in Africa are experiencing a mental health crisis. Let's change that together.
             </p>
           </div>
         </div>
