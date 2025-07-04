@@ -22,13 +22,11 @@ const Resources = () => {
   return <section id="resources" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-4xl font-bold text-gray-800 mb-6 md:text-4xl">
             Mental Health
             <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent"> Resources</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive tools and support designed specifically for African teen girls
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">Move from stumbling block to stepping stones with these resources</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
