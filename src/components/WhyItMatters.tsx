@@ -51,11 +51,12 @@ const WhyItMatters = () => {
           <Card className="bg-gradient-to-br from-purple-100 to-pink-100 border-0">
             <CardContent className="p-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-4">The Stigma Problem</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">As we grow into adolescence, the brain undergoes some chemical changes that can sometimes lead to emotional and mental imbalances. This is often misunderstood by our society.</p>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Parents often tell their daughters to "just pray about it" without providing proper support 
-                or professional help. This dismissive approach leaves girls feeling isolated and unheard.
-              </p>
+              <p className="text-gray-600 mb-4 leading-relaxed">As we grow into adolescence, the brain undergoes some chemical changes that can sometimes lead to emotional and mental imbalances. This is often misunderstood by our society.
+
+
+The Stigma Problem</p>
+              <p className="text-gray-600 mb-4 leading-relaxed">"herMind Space" does not in anyway replace professional or medical help!!!
+We highly encourage that you get professional help if neeed.</p>
               <div className="bg-white/50 rounded-lg p-4">
                 <p className="text-sm text-gray-700 italic">
                   "When poor mental health is not treated among girls, the problem compounds and they 
