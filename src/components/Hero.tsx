@@ -33,8 +33,8 @@ const Hero = () => {
           <div className="mb-8 animate-fade-in">
             <h1 className="text-5xl font-bold bg-gradient-to-r from-purple-600 via-pink-500 to-green-500 bg-clip-text text-transparent mb-6 md:text-5xl py-[10px]">herMind Space</h1>
             
-            <p className="text-xl md:text-2xl text-gray-700 mb-4 font-light px-0 py-0 my-0 mx-0">The Girls' School of Mind</p>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">A safe digital space designed specifically for African teen girls (13-20) to foster empowerment, enlightenment, and mental wellness.</p>
+            <p className="text-xl text-gray-700 mb-4 font-light px-0 py-0 my-0 mx-0 md:text-xl">A safe digital space designed specifically for African teen girls (13-20) to foster empowerment, enlightenment, and mental wellness.</p>
+            
           </div>
 
           <div className="mb-12 animate-fade-in" style={{
