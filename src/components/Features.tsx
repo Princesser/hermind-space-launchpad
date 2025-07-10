@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { GraduationCap, Users, Sparkles, MessageCircle, Target } from 'lucide-react';
-
 const Features = () => {
   const features = [{
     icon: GraduationCap,
@@ -24,40 +23,6 @@ const Features = () => {
     title: 'Goal Setting & Tracking',
     description: 'Set wellness goals, track your mental health journey, and celebrate small victories along the way'
   }];
-
-  return (
-    <section id="features" className="py-20 bg-gradient-to-br from-pink-50 via-purple-50 to-green-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6 md:text-4xl">
-            How We
-            <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent"> Support You</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Comprehensive tools and community to help you navigate your mental health journey
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
-            const IconComponent = feature.icon;
-            return (
-              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-0 bg-white/80 backdrop-blur-sm">
-                <CardContent className="p-8 text-center">
-                  <div className="flex justify-center mb-6">
-                    <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center">
-                      <IconComponent className="w-8 h-8 text-purple-600" />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-4">{feature.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
+  return;
 };
 export default Features;
