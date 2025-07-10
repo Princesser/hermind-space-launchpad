@@ -6,6 +6,7 @@ import AboutUs from '@/components/AboutUs';
 import WhyItMatters from '@/components/WhyItMatters';
 import Features from '@/components/Features';
 import Resources from '@/components/Resources';
+import WaitlistForm from '@/components/WaitlistForm';
 import Testimonials from '@/components/Testimonials';
 import ContactUs from '@/components/ContactUs';
 import Footer from '@/components/Footer';
@@ -19,6 +20,7 @@ const Index = () => {
       <WhyItMatters />
       <Features />
       <Resources />
+      <WaitlistForm />
       <Testimonials />
       <ContactUs />
       <Footer />

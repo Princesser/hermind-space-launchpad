@@ -53,7 +53,17 @@ const AboutUs = () => {
           <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-0 shadow-xl">
             <CardContent className="p-8">
               <div className="text-center">
-                
+                {/* Profile Image */}
+                <div className="flex justify-center mb-6">
+                  <div className="relative">
+                    <img
+                      src="/lovable-uploads/202df12f-7203-42a9-9167-1eb01581286f.png"
+                      alt="Princess Mbamalu"
+                      className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
+                    />
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-200/20 to-pink-200/20"></div>
+                  </div>
+                </div>
                 <h4 className="text-xl font-semibold text-gray-800 mb-4">Princess Mbamalu</h4>
                 <p className="text-gray-600 mb-4 font-medium">Founder & Visionary</p>
                 <div className="flex justify-center mb-4">
