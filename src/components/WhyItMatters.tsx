@@ -30,10 +30,9 @@ const WhyItMatters = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {statistics.map((stat, index) => {
-            const iconName = stat.icon;
-            const IconComponent = iconName === 'BarChart' ? BarChart : iconName === 'Heart' ? Heart : TrendingUp;
-            return (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm border-0">
+          const iconName = stat.icon;
+          const IconComponent = iconName === 'BarChart' ? BarChart : iconName === 'Heart' ? Heart : TrendingUp;
+          return <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm border-0">
                 <CardContent className="p-8">
                   <div className="flex justify-center mb-4">
                     <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center">
@@ -43,9 +42,8 @@ const WhyItMatters = () => {
                   <h3 className="text-3xl font-bold text-purple-600 mb-2">{stat.number}</h3>
                   <p className="text-gray-600">{stat.label}</p>
                 </CardContent>
-              </Card>
-            );
-          })}
+              </Card>;
+        })}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -64,7 +62,7 @@ const WhyItMatters = () => {
               <h3 className="text-xl font-semibold text-gray-800 mb-4">The Stigma Problem</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">As we grow into adolescence, the brain undergoes some chemical changes that can sometimes lead to emotional and mental imbalances. This is often misunderstood by our society.</p>
               
-              <h4 className="text-lg font-bold text-gray-800 mb-3">Disclaimer</h4>
+              <h4 className="text-lg text-gray-800 mb-3 font-semibold">Disclaimer</h4>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 "herMind Space" does not in any way replace professional or medical help! We highly encourage that you get professional help if needed.
               </p>
