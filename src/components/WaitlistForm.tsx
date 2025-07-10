@@ -55,14 +55,6 @@ const WaitlistForm = () => {
       setIsLoading(false);
     }
   };
-  return <section className="py-20 bg-gradient-to-br from-purple-50 via-pink-50 to-green-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <Card className="border-0 shadow-2xl bg-white/90 backdrop-blur-sm">
-            
-          </Card>
-        </div>
-      </div>
-    </section>;
+  return;
 };
 export default WaitlistForm;
