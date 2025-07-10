@@ -29,11 +29,6 @@ const Features = () => {
       title: 'Goal Setting & Tracking',
       description: 'Set wellness goals, track your mental health journey, and celebrate small victories along the way'
     },
-    {
-      icon: '📱',
-      title: '24/7 Access',
-      description: 'Get support whenever you need it most - during exam stress, sleepless nights, or overwhelming moments'
-    }
   ];
 
   return (
