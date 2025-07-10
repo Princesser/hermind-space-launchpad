@@ -1,18 +1,19 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
+import { BarChart, Heart, TrendingUp } from 'lucide-react';
 const WhyItMatters = () => {
   const statistics = [{
     number: '70M+',
     label: 'Women in Africa experiencing mental health crisis',
-    icon: '📊'
+    icon: 'BarChart'
   }, {
     number: '6/10',
     label: 'African girls experience anxiety and depression',
-    icon: '💔'
+    icon: 'Heart'
   }, {
     number: '3x',
     label: 'Higher rate of mental health issues in girls vs boys',
-    icon: '⚡'
+    icon: 'TrendingUp'
   }];
   const challenges = ['Academic pressure and college admission stress', 'Social media comparison and unrealistic expectations', 'Body shaming and self-image issues', 'Fear of failure and future uncertainty', 'Sexual abuse and relationship trauma', 'Poverty and socioeconomic pressures', 'Mental health stigma and lack of support', 'Identity and passion discovery', 'Lack of health, life, and work balance'];
   return <section id="why-it-matters" className="py-20 bg-gradient-to-br from-green-50 via-purple-50 to-pink-50">
@@ -28,13 +29,23 @@ const WhyItMatters = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-          {statistics.map((stat, index) => <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm border-0">
-              <CardContent className="p-8">
-                <div className="text-4xl mb-4">{stat.icon}</div>
-                <h3 className="text-3xl font-bold text-purple-600 mb-2">{stat.number}</h3>
-                <p className="text-gray-600">{stat.label}</p>
-              </CardContent>
-            </Card>)}
+          {statistics.map((stat, index) => {
+            const iconName = stat.icon;
+            const IconComponent = iconName === 'BarChart' ? BarChart : iconName === 'Heart' ? Heart : TrendingUp;
+            return (
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 bg-white/80 backdrop-blur-sm border-0">
+                <CardContent className="p-8">
+                  <div className="flex justify-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-purple-600" />
+                    </div>
+                  </div>
+                  <h3 className="text-3xl font-bold text-purple-600 mb-2">{stat.number}</h3>
+                  <p className="text-gray-600">{stat.label}</p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
