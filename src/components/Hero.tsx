@@ -1,10 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
 const Hero = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [placeholder, setPlaceholder] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  
+  const typingText = "Enter your email to join the waitlist...";
+  // Typing effect for placeholder
+  useEffect(() => {
+    if (currentIndex < typingText.length) {
+      const timeout = setTimeout(() => {
+        setPlaceholder(prev => prev + typingText[currentIndex]);
+        setCurrentIndex(prev => prev + 1);
+      }, 100);
+      return () => clearTimeout(timeout);
+    }
+  }, [currentIndex, typingText]);
+
   const handleWaitlistSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) {
@@ -41,7 +56,20 @@ const Hero = () => {
           animationDelay: '0.2s'
         }}>
             <form onSubmit={handleWaitlistSignup} className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
-              <Input type="email" placeholder="Enter your email" value={email} onChange={e => setEmail(e.target.value)} className="flex-1 h-12 text-lg border-2 border-purple-200 focus:border-purple-400 rounded-full px-6" />
+              <div className="relative flex-1">
+                <Input 
+                  type="email" 
+                  placeholder={placeholder} 
+                  value={email} 
+                  onChange={e => setEmail(e.target.value)} 
+                  className="h-12 text-lg border-2 border-purple-200 focus:border-purple-400 rounded-full px-6" 
+                />
+                {currentIndex >= typingText.length && (
+                  <div className="absolute right-3 top-1/2 transform -translate-y-1/2">
+                    <div className="w-0.5 h-6 bg-purple-500 animate-pulse"></div>
+                  </div>
+                )}
+              </div>
               <Button type="submit" disabled={isLoading} className="h-12 px-8 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-full transition-all duration-300 hover:scale-105">
                 {isLoading ? 'Joining...' : 'Join the Waitlist'}
               </Button>
