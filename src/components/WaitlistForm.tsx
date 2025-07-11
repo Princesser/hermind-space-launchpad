@@ -64,59 +64,6 @@ const WaitlistForm = () => {
       setIsLoading(false);
     }
   };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 to-purple-50 dark:from-primary/10 dark:to-purple-900/20">
-      <div className="container mx-auto px-4">
-        <Card className="max-w-2xl mx-auto border-border/50 shadow-xl">
-          <CardContent className="p-8 text-center">
-            <div className="mb-6">
-              <Mail className="w-12 h-12 text-primary mx-auto mb-4" />
-              <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-primary to-purple-400 bg-clip-text text-transparent">
-                Join Our Waitlist
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Be the first to know when Her Mind Space launches and get early access to our supportive community
-              </p>
-            </div>
-            
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="relative">
-                <Input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={placeholder}
-                  className="text-center py-6 text-lg border-2 focus:border-primary transition-colors"
-                  required
-                  disabled={isLoading}
-                />
-              </div>
-              
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full py-6 text-lg font-semibold bg-gradient-to-r from-primary to-purple-400 hover:from-primary/90 hover:to-purple-400/90 transition-all duration-300"
-                disabled={isLoading}
-              >
-                {isLoading ? (
-                  <>
-                    <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                    Joining waitlist...
-                  </>
-                ) : (
-                  'Join the Waitlist'
-                )}
-              </Button>
-            </form>
-            
-            <p className="text-sm text-muted-foreground mt-4">
-              We respect your privacy. No spam, just updates about our launch.
-            </p>
-          </CardContent>
-        </Card>
-      </div>
-    </section>
-  );
+  return;
 };
 export default WaitlistForm;
