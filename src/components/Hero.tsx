@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 const Hero = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -32,15 +33,40 @@ const Hero = () => {
     }
     setIsLoading(true);
 
-    // Simulate API call
-    setTimeout(() => {
+    try {
+      // Save to waitlist table
+      const { error: insertError } = await supabase
+        .from('waitlist')
+        .insert([{ email }]);
+        
+      if (insertError) {
+        throw insertError;
+      }
+
+      // Send confirmation email
+      const { error: functionError } = await supabase.functions.invoke('send-waitlist-confirmation', {
+        body: { email }
+      });
+      
+      if (functionError) {
+        console.warn('Email sending failed:', functionError);
+      }
+
       toast({
         title: "Welcome to the waitlist! 🌸",
         description: "You're now on the waitlist. We'll notify you when herMind space launches."
       });
       setEmail('');
+    } catch (error: any) {
+      console.error('Error joining waitlist:', error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
   return <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-pink-50 to-green-50 pt-16">
       <div className="container mx-auto px-4 py-20">
