@@ -55,56 +55,6 @@ const WaitlistForm = () => {
       setIsLoading(false);
     }
   };
-
-  return (
-    <section id="waitlist" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">
-            Join Our
-            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent"> Waitlist</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-            Be the first to know when herMind Space launches. Get early access to our mental health resources and community.
-          </p>
-        </div>
-
-        <div className="max-w-md mx-auto">
-          <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-50 to-pink-50">
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-purple-500 w-5 h-5" />
-                  <Input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder={placeholder}
-                    className="pl-10 py-3 text-center border-purple-200 focus:border-purple-500 focus:ring-purple-500"
-                    required
-                  />
-                </div>
-                
-                <Button 
-                  type="submit" 
-                  disabled={isLoading || !email}
-                  className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white py-3"
-                >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                      Joining...
-                    </>
-                  ) : (
-                    'Join Waitlist'
-                  )}
-                </Button>
-              </form>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </section>
-  );
+  return;
 };
 export default WaitlistForm;
