@@ -98,7 +98,7 @@ const ContactUs = () => {
                   <Mail className="text-purple-600 mt-1" size={24} />
                   <div>
                     <h4 className="font-semibold text-gray-800 mb-2">Email Us</h4>
-                    <p className="text-gray-600">contact@hermindspace.org</p>
+                    <p className="text-gray-600">hermindspace@gmail.com</p>
                   </div>
                 </div>
               </CardContent>
