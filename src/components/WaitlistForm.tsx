@@ -64,56 +64,6 @@ const WaitlistForm = () => {
       setIsLoading(false);
     }
   };
-
-  return (
-    <section id="waitlist" className="py-20 bg-gradient-to-br from-purple-600 to-pink-500">
-      <div className="container mx-auto px-4 text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Mental Health Journey?
-          </h2>
-          <p className="text-xl text-purple-100 mb-8">
-            Join thousands of African teen girls who are already part of our supportive community
-          </p>
-          
-          <Card className="bg-white/10 backdrop-blur-lg border-white/20">
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-purple-400 w-5 h-5" />
-                  <Input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder={placeholder}
-                    className="pl-12 py-4 text-lg bg-white/90 border-white/30 focus:border-purple-400"
-                    required
-                  />
-                </div>
-                <Button 
-                  type="submit" 
-                  disabled={isLoading}
-                  className="w-full py-4 text-lg bg-white text-purple-600 hover:bg-purple-50 font-semibold"
-                >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      Joining...
-                    </>
-                  ) : (
-                    'Join the Waitlist'
-                  )}
-                </Button>
-              </form>
-              
-              <p className="text-purple-100 text-sm mt-6">
-                By joining, you'll be first to know when herMind Space launches and get exclusive early access.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </section>
-  );
+  return;
 };
 export default WaitlistForm;
