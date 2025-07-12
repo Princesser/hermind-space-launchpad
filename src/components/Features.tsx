@@ -23,32 +23,6 @@ const Features = () => {
     title: 'Goal Setting & Tracking',
     description: 'Set wellness goals, track your mental health journey, and celebrate small victories along the way'
   }];
-  
-  return (
-    <section className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-purple-900 mb-4">What We Offer</h2>
-          <p className="text-lg text-purple-700 max-w-2xl mx-auto">
-            Comprehensive support designed specifically for African teen girls navigating mental health challenges
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-shadow bg-white/80 backdrop-blur-sm">
-              <CardContent className="p-6 text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-8 h-8 text-purple-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-purple-900 mb-3">{feature.title}</h3>
-                <p className="text-purple-700 leading-relaxed">{feature.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return;
 };
 export default Features;
