@@ -1,10 +1,7 @@
-
 import React from 'react';
 import { Linkedin } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-purple-900 text-white py-16">
+  return <footer className="bg-purple-900 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Left Section - Brand */}
@@ -36,18 +33,11 @@ const Footer = () => {
             <div className="flex-1">
               <div className="flex items-center space-x-2 mb-2">
                 <span className="font-medium text-white">Princess Mbamalu</span>
-                <a 
-                  href="https://www.linkedin.com/in/princess-mbamalu%E2%9A%A1%EF%B8%8F-29134821a/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-purple-300 hover:text-white transition-colors"
-                >
+                <a href="https://www.linkedin.com/in/princess-mbamalu%E2%9A%A1%EF%B8%8F-29134821a/" target="_blank" rel="noopener noreferrer" className="text-purple-300 hover:text-white transition-colors">
                   <Linkedin className="w-4 h-4" />
                 </a>
               </div>
-              <p className="text-purple-200 text-sm">
-                Product designer and social technology entrepreneur dedicated to fighting the mental health crisis in Africa.
-              </p>
+              <p className="text-purple-200 text-sm">Product designer and social technology entrepreneur, dedicated to fighting the mental health crisis in Africa.</p>
             </div>
           </div>
         </div>
@@ -59,8 +49,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
