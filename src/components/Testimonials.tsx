@@ -2,20 +2,20 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 const Testimonials = () => {
   const testimonials = [{
-    name: 'Amara K.',
-    role: 'University Student, Lagos',
-    content: 'Finally, a space where I can talk about my anxiety without being told to just pray about it. The community here truly understands what we go through.',
-    avatar: '👩🏿‍🎓'
+    name: 'Evangeline',
+    role: 'Software Engineer',
+    content: 'HerMind Space is the mental health resource every African teenage girl needs. The platform is a well-curated gem filled with educational and calming content that truly uplifts the spirit.',
+    avatar: '👩🏿‍💻'
   }, {
-    name: 'Zara M.',
-    role: 'High School Student, Accra',
-    content: 'The pressure to excel in everything was overwhelming me. herMind space taught me it\'s okay to not be perfect and gave me tools to manage my stress.',
-    avatar: '👩🏾‍💼'
+    name: 'Dammy E.',
+    role: 'Robotics and AI Enthusiast',
+    content: 'I love the vision and how everything—blogs, music, affirmations, books—is in one space. It\'s a much-needed space for awareness, healing, and connection. Your project has the potential to make a significant impact on the mental health of teen girls in Africa.',
+    avatar: '👩🏾‍🔬'
   }, {
-    name: 'Fatima A.',
-    role: 'STEM Student, Abuja',
-    content: 'Being surrounded by other ambitious girls who also struggle with anxiety made me feel less alone. We\'re changing the narrative together.',
-    avatar: '👩🏿‍🔬'
+    name: 'Hafsat M.',
+    role: 'Writer and Health Enthusiast',
+    content: 'The design, emojis, and colors made me want to keep exploring. The jokes were relatable, the content was real—and it felt like something made for us. You did a really good job!',
+    avatar: '👩🏿‍💼'
   }];
 
   return (
@@ -23,8 +23,8 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-6">
-            Real Stories from 
-            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent"> Our Community</span>
+            girls review on 
+            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">herMind Space</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Hear from African teen girls who are transforming their mental health journey
