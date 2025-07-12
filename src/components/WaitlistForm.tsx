@@ -64,56 +64,6 @@ const WaitlistForm = () => {
       setIsLoading(false);
     }
   };
-  return (
-    <section id="waitlist" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">
-            Join the Movement
-          </h2>
-          <p className="text-xl text-gray-600 mb-12">
-            Be among the first to access our mental health platform designed specifically for African teen girls
-          </p>
-
-          <Card className="border-0 shadow-xl bg-white/90 backdrop-blur-sm">
-            <CardContent className="p-8">
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="relative">
-                  <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <Input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder={placeholder}
-                    className="pl-12 h-12 text-lg border-2 border-gray-200 focus:border-purple-500 transition-colors"
-                    disabled={isLoading}
-                    required
-                  />
-                </div>
-                <Button
-                  type="submit"
-                  size="lg"
-                  disabled={isLoading}
-                  className="w-full h-12 text-lg bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 transition-all duration-300"
-                >
-                  {isLoading ? (
-                    <>
-                      <Loader2 className="mr-2 h-5 w-5 animate-spin" />
-                      Joining...
-                    </>
-                  ) : (
-                    'Join the Waitlist'
-                  )}
-                </Button>
-              </form>
-              <p className="text-sm text-gray-500 mt-4">
-                Join thousands of girls already on our waitlist. No spam, just updates.
-              </p>
-            </CardContent>
-          </Card>
-        </div>
-      </div>
-    </section>
-  );
+  return;
 };
 export default WaitlistForm;
