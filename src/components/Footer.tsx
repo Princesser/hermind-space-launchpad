@@ -33,29 +33,21 @@ const Footer = () => {
           {/* Right Section - Founded By */}
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold mb-4 text-purple-100">Founded By</h4>
-            <div className="flex items-start space-x-3">
-              <img 
-                src="/lovable-uploads/202df12f-7203-42a9-9167-1eb01581286f.png" 
-                alt="Princess Mbamalu"
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <div className="flex-1">
-                <div className="flex items-center space-x-2 mb-2">
-                  <span className="font-medium text-white">Princess Mbamalu</span>
-                  <a 
-                    href="https://www.linkedin.com/in/princess-mbamalu%E2%9A%A1%EF%B8%8F-29134821a/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-purple-300 hover:text-white transition-colors"
-                  >
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                </div>
-                <p className="text-purple-200 text-sm">
-                  18-year-old product designer and social entrepreneur 
-                  dedicated to fighting the mental health crisis.
-                </p>
+            <div className="flex-1">
+              <div className="flex items-center space-x-2 mb-2">
+                <span className="font-medium text-white">Princess Mbamalu</span>
+                <a 
+                  href="https://www.linkedin.com/in/princess-mbamalu%E2%9A%A1%EF%B8%8F-29134821a/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-purple-300 hover:text-white transition-colors"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
               </div>
+              <p className="text-purple-200 text-sm">
+                Product designer and social technology entrepreneur dedicated to fighting the mental health crisis in Africa.
+              </p>
             </div>
           </div>
         </div>
