@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 const Testimonials = () => {
   const testimonials = [{
-    name: 'Evangeline',
+    name: 'Evangeline M.',
     role: 'Software Engineer',
     content: 'HerMind Space is the mental health resource every African teenage girl needs. The platform is a well-curated gem filled with educational and calming content that truly uplifts the spirit.',
     avatar: '👩🏿‍💻'
@@ -23,7 +23,7 @@ const Testimonials = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-6">
-            girls review on 
+            Girls Review on 
             <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">herMind Space</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
