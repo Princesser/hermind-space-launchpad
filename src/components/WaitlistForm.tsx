@@ -64,50 +64,6 @@ const WaitlistForm = () => {
       setIsLoading(false);
     }
   };
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 to-accent/5">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4">Join the Movement</h2>
-        <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Be among the first to experience herMind Space when we launch. 
-          Join our waitlist and become part of the community that's changing mental health for African teen girls.
-        </p>
-        
-        <Card className="max-w-md mx-auto">
-          <CardContent className="p-6">
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="relative">
-                <Mail className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                <Input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder={placeholder}
-                  className="pl-10"
-                  required
-                />
-              </div>
-              <Button 
-                type="submit" 
-                className="w-full" 
-                disabled={isLoading}
-              >
-                {isLoading ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Joining...
-                  </>
-                ) : (
-                  'Join Waitlist'
-                )}
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
-      </div>
-    </section>
-  );
+  return;
 };
-
 export default WaitlistForm;
