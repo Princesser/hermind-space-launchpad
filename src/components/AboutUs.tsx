@@ -34,7 +34,7 @@ const AboutUs = () => {
                 community support, and practical tools to help young women navigate the unique challenges 
                 they face in today's demanding world.
               </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">Founded by Princess Mbamalu, a product designer and social technology entrepreneur, herMind space was born from personal experience. community need [I discovered even more, the necessity to build herMind Space after conducting an interview research during the AFS and University of Pennslyvania Accelerators program], and aslo, the recognition that over 70 million women in Africa are experiencing a mental health crisis.</p>
+              <p className="text-gray-600 mb-6 leading-relaxed">Founded by Princess Mbamalu, a product designer and social technology entrepreneur, herMind space was born from personal experience, community need [I discovered even more, the necessity to build herMind Space after conducting an interview research during the AFS and University of Pennslyvania Accelerators program], and aslo, the recognition that over 70 million women in Africa are experiencing a mental health crisis.</p>
               
               {/* Mission highlights */}
               <div className="grid grid-cols-2 gap-4 mt-6">
@@ -56,11 +56,7 @@ const AboutUs = () => {
                 {/* Profile Image */}
                 <div className="flex justify-center mb-6">
                   <div className="relative">
-                    <img
-                      src="/lovable-uploads/202df12f-7203-42a9-9167-1eb01581286f.png"
-                      alt="Princess Mbamalu"
-                      className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg"
-                    />
+                    <img src="/lovable-uploads/202df12f-7203-42a9-9167-1eb01581286f.png" alt="Princess Mbamalu" className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg" />
                     <div className="absolute inset-0 rounded-full bg-gradient-to-br from-purple-200/20 to-pink-200/20"></div>
                   </div>
                 </div>
