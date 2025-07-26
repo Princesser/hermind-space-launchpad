@@ -64,6 +64,53 @@ const WaitlistForm = () => {
       setIsLoading(false);
     }
   };
-  return;
+  return (
+    <section className="py-16 px-4 bg-muted/30">
+      <div className="max-w-2xl mx-auto text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          Join the Movement
+        </h2>
+        <p className="text-muted-foreground text-lg mb-8">
+          Be among the first to access Her Mind Space and start your mental wellness journey
+        </p>
+        
+        <Card className="border shadow-sm">
+          <CardContent className="p-8">
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div className="relative">
+                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+                <Input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder={placeholder}
+                  className="pl-10 h-12 text-lg"
+                  required
+                />
+              </div>
+              <Button 
+                type="submit" 
+                disabled={isLoading || !email}
+                className="w-full h-12 text-lg"
+              >
+                {isLoading ? (
+                  <>
+                    <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                    Joining...
+                  </>
+                ) : (
+                  'Join Waitlist'
+                )}
+              </Button>
+            </form>
+            
+            <p className="text-sm text-muted-foreground mt-4">
+              We respect your privacy. No spam, just updates on our launch.
+            </p>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+  );
 };
 export default WaitlistForm;
