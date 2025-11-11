@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-    setIsMenuOpen(false);
+  const location = useLocation();
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
   };
   return <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-purple-100">
       <div className="container mx-auto px-4">
@@ -30,11 +28,21 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-purple-600 transition-colors">Home</button>
-            <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-purple-600 transition-colors">About Us</button>
-            <button onClick={() => scrollToSection('why-it-matters')} className="text-gray-700 hover:text-purple-600 transition-colors">Why It Matters</button>
-            <button onClick={() => scrollToSection('resources')} className="text-gray-700 hover:text-purple-600 transition-colors">Resources</button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-purple-600 transition-colors">Contact Us</button>
+            <Link to="/" className={`transition-colors ${isActive('/') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+              Home
+            </Link>
+            <Link to="/about" className={`transition-colors ${isActive('/about') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+              Why It Matters
+            </Link>
+            <Link to="/features" className={`transition-colors ${isActive('/features') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+              Features
+            </Link>
+            <Link to="/resources" className={`transition-colors ${isActive('/resources') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+              Resources
+            </Link>
+            <Link to="/contact" className={`transition-colors ${isActive('/contact') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+              Contact Us
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -46,11 +54,41 @@ const Navigation = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-2">
-              <button onClick={() => scrollToSection('home')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">Home</button>
-              <button onClick={() => scrollToSection('about')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">About Us</button>
-              <button onClick={() => scrollToSection('why-it-matters')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">Why It Matters</button>
-              <button onClick={() => scrollToSection('resources')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">Resources</button>
-              <button onClick={() => scrollToSection('contact')} className="text-left py-2 text-gray-700 hover:text-purple-600 transition-colors">Contact Us</button>
+              <Link 
+                to="/" 
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-left py-2 transition-colors ${isActive('/') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-left py-2 transition-colors ${isActive('/about') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}
+              >
+                Why It Matters
+              </Link>
+              <Link 
+                to="/features" 
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-left py-2 transition-colors ${isActive('/features') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}
+              >
+                Features
+              </Link>
+              <Link 
+                to="/resources" 
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-left py-2 transition-colors ${isActive('/resources') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}
+              >
+                Resources
+              </Link>
+              <Link 
+                to="/contact" 
+                onClick={() => setIsMenuOpen(false)}
+                className={`text-left py-2 transition-colors ${isActive('/contact') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}
+              >
+                Contact Us
+              </Link>
             </div>
           </div>}
       </div>
