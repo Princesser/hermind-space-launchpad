@@ -3,26 +3,13 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { toast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
-import { motion, AnimatePresence } from 'framer-motion';
-import journeyImage from '@/assets/journey-calmer-mind.png';
-import flourishImage from '@/assets/flourish-peace.png';
 const Hero = () => {
   const [email, setEmail] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [placeholder, setPlaceholder] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   const typingText = "Enter your email to join the waitlist...";
-  const images = [journeyImage, flourishImage];
-  
-  // Image slideshow effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % images.length);
-    }, 5000); // 5 seconds per image
-    return () => clearInterval(interval);
-  }, []);
   
   // Typing effect for placeholder
   useEffect(() => {
@@ -82,24 +69,9 @@ const Hero = () => {
       setIsLoading(false);
     }
   };
-  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-      {/* Background Slideshow */}
-      <div className="absolute inset-0 z-0">
-        <AnimatePresence mode="wait">
-          <motion.img
-            key={currentImageIndex}
-            src={images[currentImageIndex]}
-            alt="Mental wellness journey"
-            className="w-full h-full object-cover"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.2 }}
-          />
-        </AnimatePresence>
-        {/* Dim Overlay */}
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
-      </div>
+  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900">
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/30"></div>
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
