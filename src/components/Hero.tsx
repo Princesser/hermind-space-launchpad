@@ -1,5 +1,11 @@
 import React from 'react';
+import { Button } from '@/components/ui/button';
+import { MessageCircle } from 'lucide-react';
 const Hero = () => {
+  const handleJoinCommunity = () => {
+    window.open('https://chat.whatsapp.com/GB0MOX4GfCuEHq7a1dcuW5', '_blank');
+  };
+
   return <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-pink-50 to-green-50 pt-16">
       <div className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
@@ -8,6 +14,24 @@ const Hero = () => {
             
             <p className="text-xl text-gray-700 mb-4 font-light px-0 py-0 my-0 mx-0 md:text-xl">A safe digital space designed specifically for African teen girls (13-20) to foster empowerment, enlightenment, and mental wellness.</p>
             
+          </div>
+
+          <div className="mb-12 animate-fade-in" style={{
+          animationDelay: '0.2s'
+        }}>
+            <div className="flex justify-center">
+              <Button 
+                onClick={handleJoinCommunity}
+                size="lg"
+                className="h-14 px-10 text-lg font-semibold bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+              >
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Join Our Community
+              </Button>
+            </div>
+            <p className="text-sm text-gray-500 mt-4 text-center">
+              Be part of changing the mental health narrative in Africa. 💜
+            </p>
           </div>
 
 
