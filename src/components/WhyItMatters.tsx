@@ -64,7 +64,7 @@ const WhyItMatters = () => {
               
               <h4 className="text-gray-800 mb-3 font-semibold text-xl">Disclaimer</h4>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                "herMind Space" does not in any way replace professional or medical help! We highly encourage that you get professional help if needed.
+                "HerMind Space" does not in any way replace professional or medical help! We highly encourage that you get professional help if needed.
               </p>
               <div className="bg-white/50 rounded-lg p-4">
                 <p className="text-sm text-gray-700 italic">

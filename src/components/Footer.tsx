@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Left Section - Brand */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold mb-4">herMind space</h3>
+            <h3 className="text-2xl font-bold mb-4">HerMind Space</h3>
             <p className="text-purple-100 mb-4 leading-relaxed">
               Changing the mental health narrative in Africa, one girl at a time.
               Breaking stigma, building resilience, creating hope.
@@ -45,7 +45,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-purple-800 mt-12 pt-8 text-center">
           <p className="text-purple-300 text-sm">
-            © 2025 herMind space. All rights reserved. Made with 💜 for African teen girls
+            © 2025 HerMind Space. All rights reserved. Made with 💜 for African teen girls
           </p>
         </div>
       </div>

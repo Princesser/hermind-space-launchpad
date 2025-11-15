@@ -24,7 +24,7 @@ const Testimonials = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-6">
             Girls Review on{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">herMind Space</span>
+            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">HerMind Space</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Hear from African teen girls who are transforming their mental health journey
