@@ -48,7 +48,10 @@ const Hero = () => {
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Mental Health Education</h3>
               <p className="text-gray-600">Learn everything about "mental health for teens." Awareness + action = transformation.</p>
             </div>
-            <div className="text-center">
+            <div 
+              className="text-center cursor-pointer transition-transform hover:scale-105"
+              onClick={() => window.open('https://chat.whatsapp.com/GB0MOX4GfCuEHq7a1dcuW5', '_blank', 'noopener,noreferrer')}
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-green-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">👥</span>
               </div>
