@@ -23,7 +23,7 @@ const LoadingPage = () => {
         {/* Loading text */}
         <h1 className="text-2xl font-bold text-gray-800 mb-4">
           <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-            herMind Space
+            HerMind Space
           </span>
         </h1>
         

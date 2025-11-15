@@ -12,7 +12,7 @@ const AboutUs = () => {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-6 md:text-4xl text-purple-600">
             About
-            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent"> herMind space</span>
+            <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent"> HerMind Space</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             The girls' school of mind - where African teen girls learn, heal, and thrive together
@@ -34,7 +34,7 @@ const AboutUs = () => {
                 community support, and practical tools to help young women navigate the unique challenges 
                 they face in today's demanding world.
               </p>
-              <p className="text-gray-600 mb-6 leading-relaxed">Founded by Princess Mbamalu, a product designer and social technology entrepreneur, herMind space was born from personal experience, community need [I discovered even more, the necessity to build herMind Space after conducting an interview research during the AFS and University of Pennslyvania Accelerators program], and aslo, the recognition that over 70 million women in Africa are experiencing a mental health crisis.</p>
+              <p className="text-gray-600 mb-6 leading-relaxed">Founded by Princess Mbamalu, a product designer and social technology entrepreneur, HerMind Space was born from personal experience, community need [I discovered even more, the necessity to build HerMind Space after conducting an interview research during the AFS and University of Pennslyvania Accelerators program], and aslo, the recognition that over 70 million women in Africa are experiencing a mental health crisis.</p>
               
               {/* Mission highlights */}
               <div className="grid grid-cols-2 gap-4 mt-6">

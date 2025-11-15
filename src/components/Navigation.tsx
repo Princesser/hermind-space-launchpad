@@ -16,11 +16,11 @@ const Navigation = () => {
           <div className="flex items-center space-x-3">
             {/* Logo using uploaded image */}
             <div className="w-10 h-10 relative">
-              <img alt="herMind space logo" className="w-10 h-10 rounded-full object-cover" src="/lovable-uploads/c74384cc-9194-4214-b091-f79971029284.png" />
+              <img alt="HerMind Space logo" className="w-10 h-10 rounded-full object-cover" src="/lovable-uploads/c74384cc-9194-4214-b091-f79971029284.png" />
             </div>
             <div>
               <h1 className="text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-                herMind space
+                HerMind Space
               </h1>
               <p className="text-xs text-gray-500 -mt-1">the girls' school of mind</p>
             </div>
