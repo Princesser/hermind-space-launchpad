@@ -52,7 +52,10 @@ const Hero = () => {
               <h3 className="text-lg font-semibold text-gray-800 mb-2">Safe Community</h3>
               <p className="text-gray-600">Connect with fellow African teen girls who understand your experiences and challenges.</p>
             </div>
-            <div className="text-center">
+            <div 
+              className="text-center cursor-pointer transition-transform hover:scale-105"
+              onClick={() => window.open('https://fern-sweatpants-15b.notion.site/HerMind-Space-Resources-ad0386e0f4c441bc831e336e59794375?pvs=1', '_blank', 'noopener,noreferrer')}
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-green-400 to-purple-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
