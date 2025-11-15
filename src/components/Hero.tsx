@@ -38,7 +38,10 @@ const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in" style={{
           animationDelay: '0.4s'
         }}>
-            <div className="text-center">
+            <div 
+              className="text-center cursor-pointer transition-transform hover:scale-105"
+              onClick={() => window.open('https://medium.com/@hermindspace1', '_blank', 'noopener,noreferrer')}
+            >
               <div className="w-16 h-16 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌱</span>
               </div>
