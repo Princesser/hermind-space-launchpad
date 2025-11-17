@@ -1,16 +1,43 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, MoreVertical } from 'lucide-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+import {
+  Sheet,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from '@/components/ui/sheet';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isMobile = useIsMobile();
 
   const isActive = (path: string) => {
     return location.pathname === path;
+  };
+
+  const mobileNavItems = [
+    { label: 'Home', href: '#home' },
+    { label: 'About', href: '#about' },
+    { label: 'Why It Matters', href: '#why-it-matters' },
+    { label: 'Features', href: '#features' },
+    { label: 'Resources', href: '#resources' },
+    { label: 'Community', href: '#community' },
+    { label: 'Testimonials', href: '#testimonials' },
+    { label: 'Contact', href: '#contact' },
+  ];
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setIsMobileMenuOpen(false);
+    }
   };
   return <nav className="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-purple-100">
       <div className="container mx-auto px-4">
@@ -49,7 +76,36 @@ const Navigation = () => {
             </div>
           )}
 
-          {/* Mobile Menu Button - Only for tablet, not mobile single-page */}
+          {/* Mobile three-dot menu - Only for mobile single-page */}
+          {isMobile && (
+            <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon" className="text-gray-700">
+                  <MoreVertical className="h-6 w-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-64">
+                <SheetHeader>
+                  <SheetTitle className="text-left text-lg font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+                    Menu
+                  </SheetTitle>
+                </SheetHeader>
+                <nav className="flex flex-col space-y-3 mt-6">
+                  {mobileNavItems.map((item) => (
+                    <button
+                      key={item.href}
+                      onClick={() => scrollToSection(item.href)}
+                      className="text-left py-3 px-2 text-gray-700 hover:text-purple-600 hover:bg-purple-50 rounded-md transition-colors font-medium"
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </nav>
+              </SheetContent>
+            </Sheet>
+          )}
+
+          {/* Tablet Menu Button - Only for tablet, not mobile single-page */}
           {!isMobile && (
             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
