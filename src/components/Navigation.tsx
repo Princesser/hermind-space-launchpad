@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const isMobile = useIsMobile();
 
   const isActive = (path: string) => {
     return location.pathname === path;
@@ -26,33 +28,37 @@ const Navigation = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className={`transition-colors ${isActive('/') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
-              Home
-            </Link>
-            <Link to="/about" className={`transition-colors ${isActive('/about') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
-              Why It Matters
-            </Link>
-            <Link to="/features" className={`transition-colors ${isActive('/features') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
-              Features
-            </Link>
-            <Link to="/resources" className={`transition-colors ${isActive('/resources') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
-              Resources
-            </Link>
-            <Link to="/contact" className={`transition-colors ${isActive('/contact') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
-              Contact Us
-            </Link>
-          </div>
+          {/* Desktop Navigation - Hidden on mobile single-page */}
+          {!isMobile && (
+            <div className="hidden md:flex items-center space-x-8">
+              <Link to="/" className={`transition-colors ${isActive('/') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+                Home
+              </Link>
+              <Link to="/about" className={`transition-colors ${isActive('/about') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+                Why It Matters
+              </Link>
+              <Link to="/features" className={`transition-colors ${isActive('/features') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+                Features
+              </Link>
+              <Link to="/resources" className={`transition-colors ${isActive('/resources') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+                Resources
+              </Link>
+              <Link to="/contact" className={`transition-colors ${isActive('/contact') ? 'text-purple-600 font-semibold' : 'text-gray-700 hover:text-purple-600'}`}>
+                Contact Us
+              </Link>
+            </div>
+          )}
 
-          {/* Mobile Menu Button */}
-          <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          {/* Mobile Menu Button - Only for tablet, not mobile single-page */}
+          {!isMobile && (
+            <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          )}
         </div>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && <div className="md:hidden py-4 border-t border-gray-200">
+        {/* Mobile Navigation - Only for tablet, not mobile single-page */}
+        {!isMobile && isMenuOpen && <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-2">
               <Link 
                 to="/" 

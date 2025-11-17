@@ -4,8 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
+import Index from "./pages/Index";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import FeaturesPage from "./pages/FeaturesPage";
@@ -17,7 +19,14 @@ const queryClient = new QueryClient();
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+  const isMobile = useIsMobile();
   
+  // Mobile: Single page experience
+  if (isMobile) {
+    return <Index />;
+  }
+  
+  // Desktop/Tablet: Multi-page experience
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
@@ -32,19 +41,27 @@ const AnimatedRoutes = () => {
   );
 };
 
+const AppContent = () => {
+  const isMobile = useIsMobile();
+  
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navigation />
+      <main className="flex-grow">
+        <AnimatedRoutes />
+      </main>
+      {!isMobile && <Footer />}
+    </div>
+  );
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="min-h-screen flex flex-col">
-          <Navigation />
-          <main className="flex-grow">
-            <AnimatedRoutes />
-          </main>
-          <Footer />
-        </div>
+        <AppContent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
