@@ -19,18 +19,13 @@ const queryClient = new QueryClient();
 
 const AnimatedRoutes = () => {
   const location = useLocation();
-  const isMobile = useIsMobile();
   
-  // Mobile: Single page experience
-  if (isMobile) {
-    return <Index />;
-  }
-  
-  // Desktop/Tablet: Multi-page experience
+  // All devices support both layouts
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Index />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/features" element={<FeaturesPage />} />
         <Route path="/resources" element={<ResourcesPage />} />
@@ -42,7 +37,8 @@ const AnimatedRoutes = () => {
 };
 
 const AppContent = () => {
-  const isMobile = useIsMobile();
+  const location = useLocation();
+  const isSinglePage = location.pathname === '/';
   
   return (
     <div className="min-h-screen flex flex-col">
@@ -50,7 +46,7 @@ const AppContent = () => {
       <main className="flex-grow">
         <AnimatedRoutes />
       </main>
-      {!isMobile && <Footer />}
+      {!isSinglePage && <Footer />}
     </div>
   );
 };
